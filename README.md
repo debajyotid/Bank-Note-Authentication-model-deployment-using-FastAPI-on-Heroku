@@ -27,4 +27,4 @@ We need to create the below files:
 2. procfile: This is a standard file required for Heroku deployment, telling how to deploy the application and which methods to execute. we mention here that we wish to run the "setup.sh" file and thereon we wish to run the command "streamlit run app.py" like we were running when executing the app locally
 3. requirements.txt: once again a standard Heroku deployment file, highlighting the environmental requirements for running the python app on Heroku instance.
 
-The web-app is available at: https://deb-banknoteauth-streamlit.herokuapp.com
+The web-app is available at: https://deb-banknoteauth-streamlit.herokuapp.com/docs
