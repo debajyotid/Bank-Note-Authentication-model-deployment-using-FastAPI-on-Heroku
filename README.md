@@ -20,6 +20,11 @@ Now to run this on a Heroku like cloud based service, we needed to provide some 
 							app: app specifies the app.py file where our FastAPI app is initialized
 2. requirements.txt: 	This is once again similar to what we have used earlier with Heroku, only additionally this time we need to specify installation for uvicorn, gunicorn, fastapi, uvloop, and fastloops.
 
-The deployment process is standard involving uploading the code to GitHub and then linking the same code-base to Heroku for it to do the needful for deployment.
+To run this, we need to execute this app.py file using StreamLit from CLI, using the command "streamlit run api.py", when running locally. However, as in this case we will be run through Heroku, so some additonal changes will be needed.
 
-The web-app is available at: https://deb-banknoteauth-fastapi.herokuapp.com/docs
+We need to create the below files:
+1. setup.sh: This is a bash file, which helps create our StreamLit environment on Heroku.
+2. procfile: This is a standard file required for Heroku deployment, telling how to deploy the application and which methods to execute. we mention here that we wish to run the "setup.sh" file and thereon we wish to run the command "streamlit run app.py" like we were running when executing the app locally
+3. requirements.txt: once again a standard Heroku deployment file, highlighting the environmental requirements for running the python app on Heroku instance.
+
+The web-app is available at: https://deb-banknoteauth-streamlit.herokuapp.com
